@@ -316,6 +316,7 @@ li {
     width: 25%;
 }
 .logo-desc__paragraph {
+    position: relative;
     font-family: 'SF Pro Display';
     font-style: normal;
     font-weight: 900;
@@ -334,9 +335,21 @@ li {
     letter-spacing: 0.05em;
     color: #000000;
 }
+.logo-desc__paragraph::after {
+    content: 'BEARDMAN';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    transform-origin: bottom;
+    transform: rotateX(180deg);
+    line-height: 1em;
+    background: linear-gradient(0deg, #000000 0, rgba(255, 255, 255, 0) 70%);
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    opacity: 0.7; 
+}
 .header-logo__desc {
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
 }
 .header-logo {
@@ -359,9 +372,10 @@ li {
 }
 .btn-partner {
     margin-right: 20px;
+    
 }
 .btn-link__partner {   
-    font-family: 'Montserrat';
+    font-family: 'SF Pro Display';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -371,9 +385,15 @@ li {
     padding: 10px 17px 10px 20px;
     border: 2px solid #C8802C;
     border-radius: 50px;
+    background-color: #c5c5c541;
+    transition: all 0.3s ease-in-out;
+}
+.btn-link__partner:hover {
+    background-color: #c5c5c58f;
+    box-shadow: 1px 2px 10px #c87f2c91;
 }
 .btn-link__call {   
-    font-family: 'Montserrat';
+    font-family: 'SF Pro Display';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -384,6 +404,12 @@ li {
     padding: 10px 17px 10px 20px;
     border: 2px solid #0C4175;
     border-radius: 50px;
+    background-color: #c5c5c541;
+    transition: all 0.3s ease-in-out;
+}
+.btn-link__call:hover {
+    background-color: #c5c5c58f;
+    box-shadow: 1px 2px 10px #0c417586;
 }
 .menu-list > li {
     position: relative;
@@ -689,7 +715,7 @@ body.touch .menu-list > li.active-arrow .menu-arrow {
 .header-desc {
     position: relative;
     left: 20%;
-    top: 30%
+    top: 30%;
 }
 .header-desc__iteam {
     margin-bottom: 20px;
@@ -702,6 +728,7 @@ body.touch .menu-list > li.active-arrow .menu-arrow {
     font-size: 60px;
     line-height: 120%;
     color: #222222;
+    position: relative;
 }
 .header-item1__span {
     display: block;
@@ -1957,7 +1984,7 @@ html.is-animating .transition-fade {
     box-shadow: 2px 2px 5px #222222;
 }
 .popup-close:hover {
-    box-shadow: 2px 2px 5px #222222;
+    box-shadow: 0px 1px 1px #2222226c;
 }
 .bar {
     display: block;
@@ -2182,16 +2209,6 @@ html.is-animating .transition-fade {
     .menu-body.active {
         left: 0;
     }
-    /* .menu-body::before {
-        content: '';
-        position: fixed;
-        width: 100%;
-        height: 70px;
-        top: 0;
-        left: 0;
-        background-color: #912105;
-        z-index: 5;
-    } */
     .menu-list {
         width: 100%;
         align-items: flex-start;
@@ -2498,9 +2515,6 @@ html.is-animating .transition-fade {
     .buton-group {
         align-items: center;
     }
-    /* .swiper-slide {
-        flex-direction: column;
-    } */
     .accordion-control {
         width: 95%;
     }
@@ -2530,6 +2544,25 @@ html.is-animating .transition-fade {
     }
     .footer-rules__img{
         display: none;
+    }
+    .popup-body {
+        padding: 15px 15px;
+        width: 90%;
+    }
+    .popup-titel__content {
+        font-size: 32px;
+    }
+    .popup-description {
+        width: 250px;
+    }
+    .popup-form {
+        flex-direction: column;
+        width: 95%;
+        margin-bottom: 0;
+    }
+    .popup-call {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
 @media (max-width: 425px) {
@@ -2573,7 +2606,10 @@ html.is-animating .transition-fade {
         background-repeat: no-repeat;
         background-position-x: 70%;
     }
-     .client-card {
+    .client-card {
         width: 100%;
+    }
+    .logo-desc__paragraph-2 {
+        display: none;
     }
 }
