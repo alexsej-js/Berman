@@ -2573,4 +2573,7 @@ html.is-animating .transition-fade {
         background-repeat: no-repeat;
         background-position-x: 70%;
     }
+     .client-card {
+        width: 100%;
+    }
 }
