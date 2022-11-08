@@ -2612,4 +2612,8 @@ html.is-animating .transition-fade {
     .logo-desc__paragraph-2 {
         display: none;
     }
+     .header-desc {
+        left: 10%;
+        top: 50%;
+    }
 }
