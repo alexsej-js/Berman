@@ -2431,6 +2431,12 @@ html.is-animating .transition-fade {
     .footer-contact-tel {
         font-size: 20px;
     }
+    .warranty-wrapper {
+        transform: translateX(10%);
+    }
+    .numbers-container__titel {
+        margin-left: 0;
+    }
 }
 @media (max-width: 560px) {
     .header-container {
@@ -2539,6 +2545,13 @@ html.is-animating .transition-fade {
         justify-content: center;
         align-items: center;
     }
+    .warranty-container {
+        background-image: url(../img/wraperty.png);
+        width: 100%;
+    }
+    .warranty-container__img {
+        display: none;
+    }
     .footer-contact-btn {
         width: 70%;
     }
@@ -2612,8 +2625,15 @@ html.is-animating .transition-fade {
     .logo-desc__paragraph-2 {
         display: none;
     }
-     .header-desc {
+    .header-desc {
         left: 10%;
         top: 50%;
+    }
+    .accordion-control {
+        width: 99%;
+    }
+    .accordion-title {
+        font-size: 14px;
+        text-align: start;
     }
 }
